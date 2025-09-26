@@ -1,8 +1,8 @@
 
-const Home = () => {
+const Index = () => {
   return (
     <div>Welcome to ALX Pro Dev Frontend</div>
   )
 }
 
-export default Home
+export default Index
