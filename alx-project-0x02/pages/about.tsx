@@ -4,9 +4,9 @@ import Header from "@/components/layout/Header"
 
 const About = () => {
     return (
-        <div>
+        <div className="p-6">
             <Header />
-            <h1>This is About Page</h1>
+            <h1 className="mt-4">This is About Page</h1>
              <p className="text-gray-700">
                 This page demonstrates the reusable Button component with different
                 sizes and shapes.

@@ -14,9 +14,9 @@ interface PostsPageProps {
 
 const Posts: React.FC<PostsPageProps> = ({ posts }) => {
     return (
-        <div>
+        <div className="p-6">
             <Header />
-            <h1 className="text-3xl font-bold">Posts</h1>
+            <h1 className="mt-4 text-3xl font-bold">Posts</h1>
             <p className="mt-2 text-gray-700">
                 This is where fetched or static posts can be displayed.
             </p>
@@ -36,14 +36,21 @@ const Posts: React.FC<PostsPageProps> = ({ posts }) => {
 }
 
 // Next.js build-time data fetching
-export async function getStaticProps() {
+// export async function getStaticProps() {
+//   const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=10");
+//   const posts: APIResponse[] = await res.json();
+
+//   return {
+//     props: { posts }
+//   };
+// }
+
+export async function getServerSideProps() {
   const res = await fetch("https://jsonplaceholder.typicode.com/posts?_limit=10");
   const posts: APIResponse[] = await res.json();
 
-  return {
-    props: { posts },
-    revalidate: 60, // optional: re-build every 60 seconds for fresh data
-  };
+  return { props: { posts } };
 }
+
 
 export default Posts

@@ -16,7 +16,7 @@ const Home = () => {
     return (
         <div className="p-6">
             <Header />
-            <h1 className="text-3xl font-bold">Welcome to the Home Page</h1>
+            <h1 className="mt-4 text-3xl font-bold">Welcome to the Home Page</h1>
              {/* Button to open modal */}
             <button
                 onClick={() => setShowPostModal(true)}

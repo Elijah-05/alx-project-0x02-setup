@@ -22,6 +22,9 @@ const Header = () => {
       <Link href="/posts" className={linkClass("/posts")}>
         Posts
       </Link>
+      <Link href="/users" className={linkClass("/users")}>
+        Users
+      </Link>
     </header>
   );
 }
