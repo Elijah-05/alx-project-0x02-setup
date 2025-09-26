@@ -1,34 +1,34 @@
 import Card from "@/components/common/Card"
 import PostModal from "@/components/common/PostModal"
+import { CardProps } from "@/interfaces"
 import { useState } from "react"
 
 
 const Home = () => {
     const [showPostModal, setShowPostModal] = useState(false)
+    const [posts, setPosts] = useState<CardProps[]>([{title: "Sample One", content: "Sample one content here"}, {title: "Second Content", content: "Description detail here"}]);
 
     const handleSubmitPost = (value: {title: string; content: string}) => {
-        console.log(value)
+        setPosts((cur) => cur.concat(value))
     }
 
     return (
         <div className="p-6">
             <h1 className="text-3xl font-bold">Welcome to the Home Page</h1>
-            <button type="button" className="bg-blue-500 py-2 px-4 rounded-lg text-white" onClick={() => setShowPostModal(true)}>Add Post</button>
+             {/* Button to open modal */}
+            <button
+                onClick={() => setShowPostModal(true)}
+                className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+            >
+                Add New Post
+            </button>
 
-            <Card
-                title="Getting Started"
-                content="Learn how to build fast web apps with Next.js, TypeScript, and Tailwind CSS."
-            />
-
-            <Card
-                title="Reusable Components"
-                content="Create modular, reusable UI pieces to keep your codebase clean and maintainable."
-            />
-
-            <Card
-                title="API Integration"
-                content="Fetch data from external APIs and display it dynamically in your app."
-            />
+            {/* Render dynamic posts */}
+            <div className="grid md:grid-cols-2 gap-6 mt-4">
+                {posts.map((post, index) => (
+                <Card key={index} title={post.title} content={post.content} />
+                ))}
+            </div>
             <PostModal isOpen={showPostModal} onClose={() => setShowPostModal(false)} onSubmit={handleSubmitPost} />
         </div>
     )
