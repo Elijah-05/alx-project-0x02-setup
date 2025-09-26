@@ -1,9 +1,11 @@
 import Button from "@/components/common/Button"
+import Header from "@/components/layout/Header"
 
 
 const About = () => {
     return (
         <div>
+            <Header />
             <h1>This is About Page</h1>
              <p className="text-gray-700">
                 This page demonstrates the reusable Button component with different
