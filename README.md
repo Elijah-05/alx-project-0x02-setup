@@ -13,24 +13,40 @@ The goal of this repository is to provide a clean, well-structured foundation fo
 ## Folder Structure
 
 ```
-alx-project-0x02-setup/
-│
+
 ├── alx-project-0x02/
+|   |
 │   ├── components/
 │   │   ├── common/
-│   │   │   └── PostCard.tsx
+│   │   │   ├── Button.tsx
+│   │   │   ├── Card.tsx
+│   │   │   ├── PostCard.tsx
+│   │   │   ├── PostModal.tsx
 │   │   └── layout/
 │   │       └── Header.tsx
+│   ├── interfaces/
+│   │   └── index.ts
 │   ├── pages/
+│   │   ├── _app.tsx
+│   │   ├── _document.tsx
+│   │   ├── about.tsx
+│   │   ├── home.tsx
 │   │   ├── index.tsx
-│   │   └── posts.tsx
-│   ├── public/
+│   │   ├── posts.tsx
+│   │   └── api/
+│   │       └── hello.ts
 │   ├── styles/
-│   └── ...
-├── README.md
-├── package.json
-├── tsconfig.json
-└── ...
+│   |   └── globals.css
+|   |
+│   ├── .gitignore
+│   ├── eslint.config.mjs
+│   ├── next-env.d.ts
+│   ├── next.config.ts
+│   ├── package.json
+│   ├── postcss.config.mjs
+│   ├── README.md
+│   ├── tsconfig.json
+│
 ```
 
 ## Getting Started
