@@ -9,3 +9,55 @@ The goal of this repository is to provide a clean, well-structured foundation fo
 - **Next.js** with **TypeScript**
 - **Tailwind CSS** for responsive styling
 - Best practices in project organization and component design
+
+## Folder Structure
+
+```
+alx-project-0x02-setup/
+│
+├── alx-project-0x02/
+│   ├── components/
+│   │   ├── common/
+│   │   │   └── PostCard.tsx
+│   │   └── layout/
+│   │       └── Header.tsx
+│   ├── pages/
+│   │   ├── index.tsx
+│   │   └── posts.tsx
+│   ├── public/
+│   ├── styles/
+│   └── ...
+├── README.md
+├── package.json
+├── tsconfig.json
+└── ...
+```
+
+## Getting Started
+
+1. **Install dependencies**
+
+   Open your terminal and run:
+   ```
+   npm install
+   ```
+
+2. **Run the development server**
+
+   ```
+   npm run dev
+   ```
+
+   The app will be available at [http://localhost:3000](http://localhost:3000).
+
+3. **Build for production**
+
+   ```
+   npm run build
+   ```
+
+4. **Start the production server**
+
+   ```
+   npm start
+   ```
